@@ -1,19 +1,40 @@
-# What is this?
+**# Vite/Node.js OSC-Websocket Boilerplate**
 
-This project is a simple starting point to use OSC messages in javascript based projects built with vite.
+*Quickly set up OSC (Open Sound Control) communication for your web projects built with Vite.*
 
-The server (`server.cjs`) uses `node-osc` and `ws` to receive OSC messages and forward them to a webpage, locally served with vite/npm, through websockets.
+**What this project provides:**
 
-The vite part of the project uses WebSocket to receive the messages as a JSON data and shows the received data in the console and in a div.
+* **Simple server implementation:** Uses `node-osc` and `ws` to receive OSC messages and broadcast them via websockets.
+* **Vite frontend integration:** WebSocket-ready setup to receive and display OSC data.
+* **SuperCollider test script:** Verify everything works with this included script.
 
-The project is based in other older ones such as [https://github.com/automata/osc-web], by Vilson Vieira, but uses new tools.
+**Inspiration and differences:**
 
-A simple SuperCollider script is also provided to test the communication process.
+This project builds upon the foundation of [osc-web] ([https://github.com/automata/osc-web](https://github.com/automata/osc-web)) by Vilson Vieira, offering a modernized toolkit with Vite and other contemporary tools.
 
-## first
-install all node modules (node-osc, ws, vite and concurrently):
-`npm i`
+**Getting Started**
 
-## run
-the command below concurrently runs both the server (`node server.cjs`) and vite (`vite`):
-`npm run dev`
+1. **Installation:**
+   ```bash
+   npm i 
+   ```
+2. **Run:**
+   ```bash
+   npm run dev 
+   ```
+
+**Notes:**
+*  The server listens for OSC and websocket connections. To configure ports and addresses, adjust settings in `server.cjs`.
+*  The webpage will display received OSC data in both the console and an on-screen element.
+
+**Let me know if you want adjustments to the title, a specific focus to highlight, or additional features to mention!**
+
+**Key Improvements**
+
+* **Clear Title:** Immediately tells people what the project is about.
+* **Concise Overview:**  A few sentences explain the purpose.
+* **Bullet Points:** Key features are easy to scan.
+* **Code Formatting:**  `bash` blocks make commands readable.
+
+
+Let me know if you'd like any other modifications. 
