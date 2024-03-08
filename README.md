@@ -6,7 +6,7 @@ The server (`server.cjs`) uses `node-osc` and `ws` to receive OSC messages and f
 
 The vite part of the project uses WebSocket to receive the messages as a JSON data and shows the received data in the console and in a div.
 
-The project is based in other older ones such as (seehttps://github.com/automata/osc-web)[https://github.com/automata/osc-web], by Vilson Vieira, but uses new tools.
+The project is based in other older ones such as [https://github.com/automata/osc-web], by Vilson Vieira, but uses new tools.
 
 A simple SuperCollider script is also provided to test the communication process.
 
