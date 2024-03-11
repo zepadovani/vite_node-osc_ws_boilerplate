@@ -12,5 +12,8 @@
     </p>
     <div id="messages"></div>
     <script src="main.js"></script>
+
+    <br/>
+    <button id="sendButton" onclick="sendOSCMessage('/testSendBack', ['anotherstring', Math.random(), Math.floor(Math.random()*127)])">Send OSC Message</button>
   </body>
 </html>

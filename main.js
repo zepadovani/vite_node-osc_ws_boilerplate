@@ -1,5 +1,9 @@
+
 // Create a new WebSocket connection
 const socket = new WebSocket('ws://localhost:3000');
+const socketSend = new WebSocket('ws://localhost:3001');
+
+
 
 // Event listener for when the connection is established
 socket.addEventListener('open', () => {
@@ -27,3 +31,30 @@ socket.addEventListener('message', (event) => {
 socket.addEventListener('close', () => {
   console.log('Disconnected from the server');
 });
+
+// Function to send OSC messages to the server
+function sendOSCMessage(address, args) {
+  if (socketSend.readyState === WebSocket.OPEN) {
+    socketSend.send(JSON.stringify({ address, args }));
+    console.error(`${address} and ${args} sent to socket`); 
+  } else {
+    console.error('WebSocket not ready. Message not sent.'); 
+  }
+}
+
+// // Example usage:
+// setInterval(() => {
+  
+// }, 1000);
+
+
+// Event listener for when the connection is closed
+socketSend.addEventListener('close', () => {
+  console.log('Disconnected from the server (socketSend)');
+});
+
+
+// const button = document.getElementById('sendButton');
+
+// // Add an event listener for the 'click' event
+// button.addEventListener('click', sendOSCMessage('/someAddress', [123, 'hello'])); 
