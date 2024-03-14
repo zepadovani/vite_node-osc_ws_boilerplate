@@ -1,6 +1,6 @@
 
 //1. configure IP and OSC port to SEND MESSAGES
-~n = NetAddr("127.0.0.1", 3333); //sending port
+~n = NetAddr("192.168.0.111", 3333); //sending port
 
 //2. routine to send messages in loop
 (
